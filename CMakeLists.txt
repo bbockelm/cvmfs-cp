@@ -27,6 +27,7 @@ configure_file (
 include_directories (${CMAKE_BINARY_DIR})
 
 add_executable(cvmfs-cp src/cvmfs_cp.cc)
+install(TARGETS cvmfs-cp RUNTIME DESTINATION bin)
 
 target_link_libraries( cvmfs-cp ${LIBCVMFS_LIBRARIES} ${ZLIB_LIBRARIES} ${OPENSSL_LIBRARIES} ${UUID_LIBRARIES} rt pthread dl )
 

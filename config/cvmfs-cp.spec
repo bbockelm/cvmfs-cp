@@ -6,7 +6,10 @@ Summary:	A stand-alone tool for downloading files from CVMFS
 Group:		Applications/System
 License:	Apache 2.0
 URL:		http://github.com/bbockelm/cvmfs-cp
-Source0:	%{name}-%{version}
+
+# Generate via:
+#   git archive --format=tgz --prefix=%{name}-%{version}/ v%{version} > %{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.gz
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
